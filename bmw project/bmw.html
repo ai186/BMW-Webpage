@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW India</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" type="image/x-icon">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    width: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0078d6;
+}
+
+.icons span {
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.car-image img {
+    width: 100%;
+    height: 100vh;       /* makes it fill the viewport height */
+    object-fit: cover;   /* crops proportionally if needed */
+    display: block;
+}
+
+
+.hero-content {
+    position: absolute;
+    bottom: 80px;
+    left: 100px;
+    color: #000;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 30px;
+    line-height: 1.2;
+}
+
+.discover-btn {
+    background-color: #0078d6;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.discover-btn:hover {
+    background-color: #005fa3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-content {
+        left: 20px;
+        bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .car-image img {
+        width: 100%;
+    }
+
+
+}
+
+/* --- Find your BMW Section --- */
+.find-bmw {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.find-bmw h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.bmw-options {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.option {
+    text-align: center;
+    max-width: 250px;
+}
+
+.option img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.option p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.option button {
+    padding: 10px 25px;
+    font-size: 15px;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .bmw-options {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .option img {
+        width: 50px;
+    }
+}
+
+/* --- BMW Full Width Banner --- */
+.bmw-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/5-Series/10182/1750747451665/front-left-side-47.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+}
+
+/* Text on left */
+.banner-content h1 {
+    font-size: 160px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.banner-content p {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Call Icon on right */
+.call-icon {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.call-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Hover Effect */
+.call-icon:hover {
+    background-color: #0078d6;
+}
+
+.call-icon:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bmw-banner {
+        padding-left: 30px;
+        height: 80vh;
+    }
+
+    .banner-content h1 {
+        font-size: 100px;
+    }
+
+    .banner-content p {
+        font-size: 24px;
+    }
+
+    .call-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* --- BMW 7 Series Banner --- */
+.bmw-7series {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://bmw.scene7.com/is/image/BMW/GKL_Web_Banner_3000_3000_new:3to1?fmt=webp&wid=2560&hei=853');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    padding: 0 100px 100px;
+}
+
+.bmw7-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.bmw7-content h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.bmw7-content button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.bmw7-content button:hover {
+    background-color: #0078d6;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bmw-7series {
+        padding: 0 30px 60px;
+        height: 80vh;
+    }
+
+    .bmw7-content h2 {
+        font-size: 28px;
+    }
+
+    .bmw7-content h3 {
+        font-size: 20px;
+    }
+
+    .bmw7-content button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+
+/* Add space between BMW banner sections */
+.bmw-banner,
+.bmw-7series {
+    margin-bottom: 80px;
+}
+
+
+/* --- BMW X3 Banner --- */
+.bmw-x3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://bmw.scene7.com/is/image/BMW/x3-mobile-banner-image-1:3to1?fmt=webp&wid=2560&hei=853');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;         /* centers vertically */
+    color: #fff;
+    padding-left: 100px;
+}
+
+.x3-content h2 {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.x3-content h1 {
+    font-size: 160px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.x3-content h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.x3-content button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.x3-content button:hover {
+    background-color: #0078d6;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bmw-x3 {
+        padding-left: 30px;
+        height: 80vh;
+    }
+
+    .x3-content h2 {
+        font-size: 22px;
+    }
+
+    .x3-content h1 {
+        font-size: 100px;
+    }
+
+    .x3-content h3 {
+        font-size: 20px;
+    }
+
+    .x3-content button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+/* --- BMW iX1 Banner --- */
+.bmw-ix1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://bmw.scene7.com/is/image/BMW/3000x3000_1-1:3to1?fmt=webp&wid=2560&hei=853');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-left: 100px;
+}
+
+.ix1-content h2 {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.ix1-content h1 {
+    font-size: 160px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.ix1-content h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.ix1-content p {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.ix1-content button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.ix1-content button:hover {
+    background-color: #0078d6;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bmw-ix1 {
+        padding-left: 30px;
+        height: 80vh;
+    }
+
+    .ix1-content h2 {
+        font-size: 22px;
+    }
+
+    .ix1-content h1 {
+        font-size: 100px;
+    }
+
+    .ix1-content h3 {
+        font-size: 20px;
+    }
+
+    .ix1-content p {
+        font-size: 16px;
+    }
+
+    .ix1-content button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+.bmw-ix1 {
+    margin-top: 60px;
+}
+
+
+/* --- BMW Special Offers --- */
+.bmw-offers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px;
+    background-color: #fff;
+}
+
+.offer-image img {
+    width: 600px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.offer-content {
+    max-width: 500px;
+}
+
+.offer-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.offer-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.offer-content button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.offer-content button:hover {
+    background-color: #0078d6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bmw-offers {
+        flex-direction: column;
+        padding: 60px 30px;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .offer-image img {
+        width: 100%;
+    }
+
+    .offer-content h2 {
+        font-size: 28px;
+    }
+
+    .offer-content p {
+        font-size: 16px;
+    }
+}
+
+/* --- BMW Footer --- */
+.bmw-footer {
+    background-color: #111;
+    color: #fff;
+    padding: 80px 100px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.newsletter {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.newsletter h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.newsletter button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #0078d6;
+    color: #fff;
+}
+
+/* Footer link columns */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    font-size: 15px;
+    color: #ccc;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-column ul li:hover {
+    color: #fff;
+}
+
+/* Social links */
+.footer-social {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-social a {
+    color: #ccc;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #0078d6;
+}
+
+/* Bottom line */
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-bottom-links {
+    margin-top: 10px;
+}
+
+.footer-bottom-links a {
+    color: #999;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.footer-bottom-links a:hover {
+    color: #0078d6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bmw-footer {
+        padding: 60px 30px 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column h3 {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="AllModels.html">All Models</a></li>
+                <li><a href="Electric.html">Electric</a></li>
+                <li><a href="VisitOnlineShop.html">Visit Online Shop</a></li>
+                <li><a href="MoreBMW.html">More BMW</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <span>👤</span>
+            <span>🛒</span>
+            <span>❤</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <button class="discover-btn">Discover now</button>
+            <h1>50 YEARS OF<br>COMFORTING<br>THRILL SEEKERS</h1>
+        </div>
+        <div class="car-image">
+            <img src="https://bmw.scene7.com/is/image/BMW/Website_Banner_2_v3_desktop:16to9?fmt=webp&wid=2560&hei=1440" width="100%" alt="BMW Car">
+        </div>
+    </section>
+
+    <!-- Find your BMW Section -->
+<section class="find-bmw">
+    <h2>Find your BMW.</h2>
+    <div class="bmw-options">
+        <div class="option">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="New Car Icon">
+            <p>Find a new car.</p>
+            <button>Search now</button>
+        </div>
+        <div class="option">
+            <img src="https://cdn-icons-png.flaticon.com/512/609/609361.png" alt="Test Drive Icon">
+            <p>Book a test drive.</p>
+            <button>Request a test drive</button>
+        </div>
+        <div class="option">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743008.png" alt="Build Icon">
+            <p>Build your own.</p>
+            <button>Configure & Price</button>
+        </div>
+    </div>
+</section>
+
+<!-- Full Width BMW Image Section -->
+<section class="bmw-banner">
+    <div class="banner-content">
+        <h1>2</h1>
+        <p>Leave boring behind.</p>
+    </div>
+    <div class="call-icon">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Call Icon"></a>
+    </div>
+</section>
+
+<!-- BMW 7 Series Section -->
+<section class="bmw-7series">
+    <div class="bmw7-content">
+        <h2>LUXURY. FAST. FORWARD.</h2>
+        <h3>THE BMW 7 RANGE.</h3>
+        <button>Discover now</button>
+    </div>
+</section>
+
+
+<!-- BMW X3 Section -->
+<section class="bmw-x3">
+    <div class="x3-content">
+        <h2>THE ALL-NEW</h2>
+        <h1>X3</h1>
+        <h3>MASTER EVERY MOMENT.</h3>
+        <button>Discover now</button>
+    </div>
+</section>
+
+<!-- BMW iX1 Section -->
+<section class="bmw-ix1">
+    <div class="ix1-content">
+        <h2>THE</h2>
+        <h1>iX1</h1>
+        <h3>LONG WHEELBASE</h3>
+        <p>DOMINATE EVERYDAY. YOUR WAY.</p>
+        <button>Know more</button>
+    </div>
+</section>
+
+<!-- BMW Special Offers Section -->
+<section class="bmw-offers">
+    <div class="offer-image">
+        <img src="https://bmw.scene7.com/is/image/BMW/5series-specialoffers:3to2?fmt=webp&wid=2560&hei=1707" alt="BMW Offer">
+    </div>
+
+    <div class="offer-content">
+        <h2>BMW Special Offers.</h2>
+        <p>Monthly EMI starting from <strong>Rs.32,222*/Month.</strong> Check Out<br>
+        similar BMW finance offers available across the BMW range.</p>
+        <button>Know more</button>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bmw-footer">
+    <div class="newsletter">
+        <h2>Stay up to date with the latest news from BMW</h2>
+        <button>Sign up</button>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-column">
+            <h3>Contact & Info</h3>
+            <ul>
+                <li>Customer support</li>
+                <li>Online Genius (FAQ)</li>
+                <li>Accident Support</li>
+                <li>Request for Offer</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Experience BMW</h3>
+            <ul>
+                <li>About us</li>
+                <li>BMW careers</li>
+                <li>BMW.com</li>
+                <li>BMW Group</li>
+                <li>BMW Chennai Plant</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Assistance & Services</h3>
+            <ul>
+                <li>Book a Service Appointment</li>
+                <li>MY BMW App</li>
+                <li>Connected Drive</li>
+                <li>Warranties</li>
+                <li>Remote Software Upgrades</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Choose & Buy</h3>
+            <ul>
+                <li>Build your Own</li>
+                <li>New Cars Search</li>
+                <li>Pre-Book and Exclusive Editions</li>
+                <li>BMW Financial Services</li>
+                <li>Finance & Leasing</li>
+                <li>BMW Offers</li>
+                <li>Book a Test Drive</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Models</h3>
+            <ul>
+                <li>BMW X series</li>
+                <li>BMW 7 series</li>
+                <li>BMW 5 series</li>
+                <li>BMW 3 series</li>
+                <li>BMW 2 series</li>
+                <li>BMW M series</li>
+                <li>BMW Concept Cars</li>
+                <li>BMW Protection Vehicles</li>
+                <li>GKL Cars</li>
+                <li>BMW Electric Cars</li>
+                <li>BMW Electric Vehicles</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-social">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright © BMW AG 2025</p>
+        <div class="footer-bottom-links">
+            <a href="#">Legal Disclaimer/Imprint</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

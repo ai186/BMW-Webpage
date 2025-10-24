@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* --- More BMW Section --- */
+.bmw-more {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 80px 100px;
+}
+
+.bmw-more h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.more-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.more-card {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 280px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.more-card:hover {
+    background-color: #0078d6;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bmw-more {
+        padding: 60px 30px;
+    }
+
+    .more-card {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- More BMW Section -->
+<section class="bmw-more">
+    <h2>More BMW</h2>
+    <div class="more-links">
+        <div class="more-card">BMW Excellence Club</div>
+        <div class="more-card">BMW Motorrad</div>
+        <div class="more-card">BMW Group Careers</div>
+        <div class="more-card">BMW Corporate Sales</div>
+        <div class="more-card">BMW Driving Experience</div>
+        <div class="more-card">BMW World</div>
+    </div>
+</section>
+
+    
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" type="image/x-icon">
+    <style>
+
+        /* ---------- Navigation Bar ---------- */
+header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #007aff;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #007aff;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-icons a {
+  color: #000;
+  font-size: 1.3rem;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+.nav-icons a:hover {
+  transform: scale(1.2);
+  color: #007aff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-icons {
+    margin-left: auto;
+  }
+}
+
+        /* ---------- BMW Electric Section ---------- */
+.electric-section {
+  position: relative;
+  background: url("https://www.topgear.com/sites/default/files/images/news-article/2018/01/2b74c7375743b3302b7a3cc9edc22f8e/p90290126_highres_bmw-m5-drift-refueli.jpg") no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  padding-left: 8%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.electric-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-electric {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #007aff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-electric:hover {
+  background-color: #005fcc;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .electric-section {
+    height: 60vh;
+    padding-left: 5%;
+  }
+
+  .electric-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .btn-electric {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- BMW Electric Description Section ---------- */
+.bmw-info {
+  background-color: #f5f5f5;
+  color: #111;
+  text-align: center;
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bmw-info h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #007aff;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.bmw-info h2 {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto 25px;
+}
+
+.bmw-info p {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bmw-info {
+    padding: 60px 8%;
+  }
+  .bmw-info h1 {
+    font-size: 2.2rem;
+  }
+  .bmw-info h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- #BornElectric Section ---------- */
+.born-electric {
+  background-color: #fff;
+  text-align: center;
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.born-electric h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #007aff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+
+/* Layout */
+.born-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.born-image img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.born-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.born-content h2 {
+  font-size: 2.2rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.born-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn-know-more {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #007aff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-know-more:hover {
+  background-color: #005fcc;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .born-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .born-content {
+    text-align: center;
+  }
+
+  .born-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .born-content p {
+    font-size: 1rem;
+  }
+}
+
+/* --- BMW iX Section --- */
+.bmw-ix {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+    gap: 60px;
+    background-color: #f7f7f7;
+}
+
+.ix-content {
+    flex: 1;
+}
+
+.ix-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.ix-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.ix-content button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.ix-content button:hover {
+    background-color: #0078d6;
+}
+
+/* Right image styling */
+.ix-image {
+    flex: 1;
+    text-align: right;
+}
+
+.ix-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bmw-ix {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 30px;
+    }
+
+    .ix-image img {
+        max-width: 100%;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+<header>
+  <nav class="navbar">
+    <div class="logo">BMW</div>
+    <ul class="nav-links">
+      <li><a href="AllModels.html">All Models</a></li>
+      <li><a href="Electric.html">Electric</a></li>
+      <li><a href="VisitOnlineShop.html">Visit Online Shop</a></li>
+      <li><a href="MoreBMW.html">More BMW</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="#"><span class="icon">👤</span></a>
+      <a href="#"><span class="icon">🛒</span></a>
+      <a href="#"><span class="icon">❤</span></a>
+    </div>
+  </nav>
+</header>
+
+    <!-- BMW Electric Cars Section -->
+<section class="electric-section">
+  <div class="electric-content">
+    <h1>BMW Electric Cars</h1>
+    <a href="#" class="btn-electric">Book a Test Drive</a>
+  </div>
+</section>
+
+<!-- BMW Electric Cars Description Section -->
+<section class="bmw-info">
+  <h1>The BMW Electric Cars.</h1>
+  <h2>
+    100% electric. 100% driving pleasure. 100% BMW.<br><br>
+    Experience an entirely new sensation of sheer driving pleasure. 
+    After all, nothing compares with the feeling of gliding almost silently 
+    through urban or rural traffic, the instant response of the electric engine 
+    and unique acceleration from stand-still. And all of this is free of exhaust 
+    fumes and local emissions. Join us to explore the world of BMW electric cars.
+  </h2>
+
+  <p><strong>Experience the joy of electric driving.</strong></p>
+</section>
+
+
+<!-- #BornElectric Section -->
+<section class="born-electric">
+  <h1>#BornElectric</h1>
+
+  <div class="born-container">
+    <div class="born-image">
+      <img src="https://www.bmw.in/en/topics/Fascination-BMW/electromobility2020-new/electric-cars/_jcr_content/root/maincontent/contentblueprint_215790074/container_copy_copy_/contentblueprint_cop/contentblueprint/image.coreimg.jpeg/1752212856889/i5-side-image-optimised-890x500.jpeg" alt="BMW i5 M60">
+    </div>
+
+    <div class="born-content">
+      <h2>The BMW i5.</h2>
+      <p>
+        Drive into a world where the ingenuity of BMW i and the power of BMW M connect. 
+        Introducing the first-ever BMW i5 M60, a 100% electric marvel that isn't just a car, 
+        but an experience engineered for unbridled excitement and unparalleled thrills. 
+        With sleek design and uncompromising performance, this executive sedan personifies 
+        exhilaration in the new age. Embark on your electrifying journey where every turn 
+        of the wheel becomes an odyssey of pure JOY.
+      </p>
+      <a href="#" class="btn-know-more">Know more about the BMW i5 M60</a>
+    </div>
+  </div>
+</section>
+
+<!-- BMW iX Section -->
+<section class="bmw-ix">
+    <div class="ix-content">
+        <h2>The BMW iX.</h2>
+        <p>
+            The all-electric BMW iX xDrive50 is a first of its kind in a future-oriented generation of automobiles.
+            With fully-electric driving pleasure and newly-developed, precise and minimalist monolithic design,
+            the all-electric BMW iX xDrive50 is a vision turned into reality. Discover the emblem of new era of
+            mobility and electrify your sheer driving pleasure.
+        </p>
+        <button>Know more about the BMW iX</button>
+    </div>
+    <div class="ix-image">
+        <img src="https://www.bmw.in/en/topics/Fascination-BMW/electromobility2020-new/electric-cars/_jcr_content/root/maincontent/contentblueprint_215790074/container_copy_copy_/contentblueprint_694/contentblueprint/image.coreimg.jpeg/1752213323293/bmw-ix50-electric.jpeg" alt="BMW iX">
+    </div>
+</section>
+
+
+
+
+
+</body>
+</html>

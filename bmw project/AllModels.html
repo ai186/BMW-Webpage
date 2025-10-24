@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW | All Models</title>
+  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" type="image/x-icon">
+  <style>
+    /* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header img {
+  width: 60px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #007aff;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  margin-top: 30px;
+  padding: 0 50px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #222;
+}
+.filter-group {
+  margin-bottom: 30px;
+}
+.filter-group button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.filter-group button:hover {
+  background-color: #007aff;
+  color: #fff;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 0 20px;
+}
+.main-content h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.main-content p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Grid and Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+.card .badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #007aff;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.card h4 {
+  font-size: 20px;
+  margin: 15px 0 5px;
+}
+.card p {
+  color: #666;
+  font-size: 15px;
+}
+.price {
+  font-weight: 600;
+  color: #111;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .filter-group button {
+    flex: 1 1 45%;
+  }
+}
+
+
+/* ----------- BMW Footer ----------- */
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 70px 20px;
+  margin-top: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.newsletter h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.signup-btn {
+  background-color: #007aff;
+  border: none;
+  padding: 10px 25px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.signup-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Footer columns */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-column h4 {
+  color: #007aff;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.footer-column ul {
+  list-style: none;
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+/* Social links */
+.social-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.social-links a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #007aff;
+}
+
+/* Bottom info */
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+}
+.footer-bottom p {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.footer-bottom ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.footer-bottom ul li a {
+  text-decoration: none;
+  color: #888;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+.footer-bottom ul li a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 30px 10px;
+  }
+  .newsletter h3 {
+    font-size: 18px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo">
+    <nav>
+      <ul>
+        <li><a href="AllModels.html">All Models</a></li>
+        <li><a href="Electric.html">Electric</a></li>
+        <li><a href="VisitOnlineShop.html">Visit Online Shop</a></li>
+        <li><a href="MoreBMW.html">More BMW</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="filter-group">
+        <h3>Categories</h3>
+        <button>SUV</button>
+        <button>Sedan</button>
+        <button>Coupé</button>
+        <button>Convertible</button>
+      </div>
+      <div class="filter-group">
+        <h3>Drivetrain</h3>
+        <button>Electric</button>
+        <button>Plug-in Hybrid</button>
+        <button>Petrol</button>
+        <button>Diesel</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h2>Discover and configure all BMW models.</h2>
+      <p>Explore our latest car models to find the smart technology, innovative features and engine type that’s right for you.</p>
+
+      <h3>Full Electric</h3>
+      <div class="grid">
+        <div class="card">
+          <span class="badge">New</span>
+          <img src="https://di-uploads-pod20.dealerinspire.com/sewickleybmw/uploads/2024/09/BMW-X3-25-trim.jpg " alt="BMW iX">
+          <h4>BMW iX</h4>
+          <p>Electric SUV</p>
+        </div>
+
+        <div class="card">
+          <img src="https://media.zigcdn.com/media/model/2024/Jun/bmw-m5-2025.jpg" alt="BMW iX1">
+          <h4>BMW iX1</h4>
+          <p>Electric SUV</p>
+        </div>
+
+        <div class="card">
+          <img src="https://www.bmw-me.com/content/dam/bmw/common/all-models/3-series/sedan/2024/navigation/bmw-3-series-phev-lci-modelfinder.png.asset.1716814924098.png" alt="BMW i7">
+          <h4>BMW i7</h4>
+          <p>Electric Sedan</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:40px;">Petrol</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/all-models/model-navigation/bmw-m4-cs-edition-vr46-flyout.png" alt="BMW X7">
+          <h4>BMW X7</h4>
+          <p>Petrol SUV</p>
+          <div class="price">From ₹12,545,000</div>
+        </div>
+
+        <div class="card">
+          <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/all-models/model-navigation/bmw-m4-competition-cabrio-lci-flyout.png" alt="BMW X5">
+          <h4>BMW X5</h4>
+          <p>Petrol SUV</p>
+          <div class="price">From ₹9,360,000</div>
+        </div>
+
+        <div class="card">
+          <span class="badge">M</span>
+          <img src="https://di-uploads-pod20.dealerinspire.com/sewickleybmw/uploads/2022/06/sew-bmw_2023-x1_lineup.jpg" alt="BMW M4">
+          <h4>BMW M4</h4>
+          <p>Petrol Coupé</p>
+          <div class="price">From ₹15,230,000</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer Section -->
+<footer>
+  <div class="newsletter">
+    <h3>Stay up to date with the latest news from BMW</h3>
+    <button class="signup-btn">Sign up</button>
+  </div>
+
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Contact & Info</h4>
+      <ul>
+        <li><a href="#">Customer Support</a></li>
+        <li><a href="#">Online Genius (FAQ)</a></li>
+        <li><a href="#">Accident Support</a></li>
+        <li><a href="#">Request for Offer</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Experience BMW</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">BMW Careers</a></li>
+        <li><a href="#">BMW.com</a></li>
+        <li><a href="#">BMW Group</a></li>
+        <li><a href="#">BMW Chennai Plant</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Assistance & Services</h4>
+      <ul>
+        <li><a href="#">Book a Service Appointment</a></li>
+        <li><a href="#">My BMW App</a></li>
+        <li><a href="#">Connected Drive</a></li>
+        <li><a href="#">Warranties</a></li>
+        <li><a href="#">Remote Software Upgrades</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Choose & Buy</h4>
+      <ul>
+        <li><a href="#">Build Your Own</a></li>
+        <li><a href="#">New Cars Search</a></li>
+        <li><a href="#">Pre-Book and Exclusive Editions</a></li>
+        <li><a href="#">BMW Financial Services</a></li>
+        <li><a href="#">Finance & Leasing</a></li>
+        <li><a href="#">BMW Offers</a></li>
+        <li><a href="#">Book a Test Drive</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Models</h4>
+      <ul>
+        <li><a href="#">BMW X Series</a></li>
+        <li><a href="#">BMW 7 Series</a></li>
+        <li><a href="#">BMW 5 Series</a></li>
+        <li><a href="#">BMW 3 Series</a></li>
+        <li><a href="#">BMW 2 Series</a></li>
+        <li><a href="#">BMW M Series</a></li>
+        <li><a href="#">BMW Concept Cars</a></li>
+        <li><a href="#">BMW Protection Vehicles</a></li>
+        <li><a href="#">GKL Cars</a></li>
+        <li><a href="#">BMW Electric Cars</a></li>
+        <li><a href="#">BMW Electric Vehicles</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="social-links">
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">X</a>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © BMW AG 2025</p>
+    <ul>
+      <li><a href="#">Legal Disclaimer/Imprint</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Cookie Policy</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
